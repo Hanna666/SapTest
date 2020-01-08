@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/apache-mime4j-0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/bsh-1.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/client-combined-3.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/client-combined-3.9.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/cssparser-0.9.16.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/dom4j-1.6.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/htmlunit-2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/htmlunit-core-js-2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/httpclient-4.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/httpcore-4.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/httpmime-4.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/jcommander-1.29.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/jetty-io-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/jetty-util-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/junit-dep-4.11.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/mysql-connector-java-5.1.38-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/nekohtml-1.9.22.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/netty-3.5.7.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/phantomjsdriver-1.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/poi-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/poi-examples-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/poi-ooxml-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/poi-ooxml-3.15.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/poi-ooxml-schemas-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/sac-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/selenium-html-runner-3.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/selenium-java-2.46.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/selenium-java-2.46.0-srcs.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/selenium-server-standalone-2.53.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/selenium-server-standalone-3.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/serializer-2.7.2.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/sikuli-webdriver-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/sikulixapi.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/sqljdbc-1.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/testng-6.8.5.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/websocket-api-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/websocket-client-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/websocket-common-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/xalan-2.7.2.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/jars/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/ExcelJars/poi-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/ExcelJars/poi-ooxml-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/ExcelJars/poi-ooxml-schemas-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/ExcelJars/ShineXLS.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Oracle jars/ojdbc7.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Oracle jars/ojdbc7_g.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Oracle jars/ojdbc8.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/ExcelJars/poi-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/ExcelJars/poi-ooxml-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/ExcelJars/poi-ooxml-schemas-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/ExcelJars/ShineXLS.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/ashot-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/commons-beanutils-1.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/commons-jxpath-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/commons-lang3-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/cssparser-0.9.11.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/derbyclient.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/eclipselink-2.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/flash-selenium.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/htmlunit-2.14.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/htmlunit-core-js-2.14.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/httpclient-4.3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/httpcore-4.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/httpmime-4.3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/ini4j-0.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/javax.persistence-2.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/jcommander-1.29.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/jetty-websocket-8.1.8.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/jna-platform-3.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/json-20080701.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/junit-4.7.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/junit-dep-4.11.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/logging-selenium-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/mysql-connector-java-5.0.7-bin(2).jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/nekohtml-1.9.20.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/netty-3.5.7.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/opencsv-4.2.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/operadriver-1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/phantomjsdriver-1.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/poi-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/poi-ooxml-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/poi-ooxml-schemas-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/protobuf-java-2.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/sac-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/saxon-8.7.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/SaxonLiaison.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/selenium-java-2.42.2.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/selenium-java-2.42.2-srcs.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/serializer-2.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/ShineXLS.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/testng.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/testng-6.8.5.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/testng-xslt-maven-plugin-test-0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/xalan-2.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Other Jars/jars/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14/libs/byte-buddy-1.8.15.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14/libs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14/libs/guava-25.0-jre.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14/libs/httpclient-4.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14/libs/httpcore-4.4.9.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14/libs/okhttp-3.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14/libs/okio-1.14.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14/libs/poi-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14/libs/poi-examples-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14/libs/poi-ooxml-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14/libs/poi-ooxml-schemas-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14/org.apache.commons.io.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14x/libs/guava-25.0-jre.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14x/libs/okhttp-3.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14x/libs/okio-1.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/Selenium 3.14x/selenium-java-3.141.59.zip"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/SikuliX SetUp/sikulixapi.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/SeleniumFiles_1/SikuliX SetUp/SikulijarFile/sikulixapi.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/guava-22.0.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace_ToImageSystems/TIS_WebAppResolve/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="D:/TIS_WebAppResolve/chromedriver/chromedriver_win32.zip"/>
+	<classpathentry kind="lib" path="C:/Users/zhanna.khananueva/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.14.2/10c93c2c0d165e895a7582dfd8b165f108658db5/testng-6.14.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/zhanna.khananueva/.gradle/caches/modules-2/files-2.1/com.hynnet/jacob/1.18/5955c5e5d26b8ccfaa983fb6c57f40ccf8ac103/jacob-1.18.jar"/>
+	<classpathentry kind="lib" path="C:/Users/zhanna.khananueva/.gradle/caches/modules-2/files-2.1/com.beust/jcommander/1.72/6375e521c1e11d6563d4f25a07ce124ccf8cd171/jcommander-1.72.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
