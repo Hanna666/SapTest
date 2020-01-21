@@ -3,11 +3,11 @@
 <suite thread-count="-1" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="SapTests.IntegrationTestsSapWeb">
+      <class name="com.tis.testcase.TIS_WebAppResolve_TestCases">
         <methods>
-          <include name="integrationTestSap" invocation-numbers="0"/>
+          <include name="TC_09_TIS_WebAppResolve_IntegrationSapTestApproveDoc"/>
         </methods>
-      </class> <!-- SapTests.IntegrationTestsSapWeb -->
+      </class> <!-- com.tis.testcase.TIS_WebAppResolve_TestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

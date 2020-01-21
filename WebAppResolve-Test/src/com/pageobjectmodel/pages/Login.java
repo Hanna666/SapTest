@@ -48,6 +48,7 @@ public class Login extends Init{
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
 			result.print("Clicked on Logout", "Pass");
+			Thread.sleep(1000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='userName']")));
 			cleanup();
 			result.print("Closed the Browser", "Pass");

@@ -5,12 +5,11 @@ import com.pageobjectmodel.pages.TIS_eFLOW;
 import com.tis.testcase.Init;
 import com.pageobjectmodel.pages.Login;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import SapAppmanager.ApplicationManager;
 import SapDocuments.GoodsReceipt;
-import SapDocuments.PurchaseOrder;
+import SapDocuments.SapDocument;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -27,29 +26,23 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.*;
 import com.pageobjectmodel.pages.TIS_eFLOW;
 
-public class IntegrationTestsSapWeb {
+public class IntegrationTestsSapWeb extends Init {
+	
+	static Login l = new Login(driver);
+	static TIS_eFLOW eFLOW = new TIS_eFLOW(driver);
+	static String url = input.ReadGlobal("URL");
+	static String mailURL = input.ReadGlobal("MailURL");
+	static String unLogin = input.ReadGlobal("UserName");
+	static String pwLogin = input.ReadGlobal("Password");
 
-    //Start application in FQA
+    //Start application in TDV
     ApplicationManager appSAPMain = new ApplicationManager("TDV.bat");
 
-    @DataProvider
-    public Iterator<Object[]> validPOFromcsv() throws IOException {
-        List<Object[]> list = new ArrayList<Object[]>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(new File("resources/PO_data.csv")))) {
-
-            String line = reader.readLine();
-            while (line != null) {
-                String[] split = line.split(",");
-                list.add(new Object[]{new PurchaseOrder(appSAPMain).fillData(split)});
-                line = reader.readLine();
-            }
-        }
-        return list.iterator();
-    }
+    
 
 
-    @Test(dataProvider = "validPOFromcsv")
-    public void integrationTestSap(PurchaseOrder docSAP) {
+    @Test
+    public void integrationTestSap() {
 
         //start SAP
         appSAPMain.init();
@@ -57,14 +50,43 @@ public class IntegrationTestsSapWeb {
         //Login
         appSAPMain.getSession().login("main");
 
-        //Create SAP doc
-        
+
+        //Create SAP doc in se37 (/TISA/RFC_OCR_CREATE) and remember his number
+        SapDocument docSAP = new SapDocument(appSAPMain);
+        /*  
         docSAP.createSapDoc();
-        docSAP.startWorkflow();
         
-       appSAPMain.stop();
-     
+        //Open "n/TISA/C"
+        docSAP.openControl();
+              
+        //start Workflow for created Sap doc, by doc number
+        docSAP.startWorkflow();           
+              
+       	  /*
+       	  1. Open WebApp;
+          2. Approve document and verify that it's has been approved; 		
+          3. Close WebApp
+           
+       				SapDocument eFlowID = docSAP;
+       				Init.OpenUrl(url);
+       				l.login(unLogin, pwLogin);
+       				eFLOW.approveWorkFlowToo(eFlowID);
+       				l.logout();	
+      	*/			
+      	//Open "n/TISA/C"
+          docSAP.openControl();
+       		        
+        //Find created Sap doc
+       	  docSAP.findSapDoc();
+       	  
+       	//Check, doc have status approved
+       	  docSAP.verifyThatDocApproved();
+
+       
+       
        
         
+       
     }
+    
 }

@@ -3,7 +3,7 @@ package com.tis.testcase;
 import com.pageobjectmodel.pages.TIS_eFLOW;
 
 import SapAppmanager.ApplicationManager;
-import SapDocuments.PurchaseOrder;
+import SapDocuments.SapDocument;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -28,12 +28,12 @@ public class TIS_WebAppResolve_TestCases extends Init {
 	static String unLogin = input.ReadGlobal("UserName");
 	static String pwLogin = input.ReadGlobal("Password");
 	
-	static //Start application in FQA
-    ApplicationManager appSAPMain = new ApplicationManager("FQA.bat");
+	static //Start application in TDV
+    ApplicationManager appSAPMain = new ApplicationManager("TDV.bat");
 	
     
     
-
+	
 	public static void TC_01_TIS_WebAppResolve_Login() throws InterruptedException {
 		/*
 		  String userName = * input.Read(tc.TestCaseID, "UserName", 1); 
@@ -104,6 +104,7 @@ public class TIS_WebAppResolve_TestCases extends Init {
 		
 	}
 	
+	
 	public static void TC_06_TIS_WebAppResolve_Email() throws InterruptedException {
 		result.print("Verification of Workflow email notification");
 		
@@ -122,6 +123,7 @@ public class TIS_WebAppResolve_TestCases extends Init {
 		
 	}
 	
+	
 	public static void TC_07_TIS_WebAppResolve_Substitution() throws InterruptedException {
 		result.print("Verification of substitute user");
 		
@@ -134,6 +136,7 @@ public class TIS_WebAppResolve_TestCases extends Init {
 		//l.cleanup();
 		
 	}
+	
 	
 	public static void TC_08_TIS_WebAppResolve_ChangePassword() throws InterruptedException {
 		result.print("Verification of ChangePassword");
@@ -148,42 +151,46 @@ public class TIS_WebAppResolve_TestCases extends Init {
 		
 	}
        
-	@Test(dataProvider = "validPOFromcsv")
-	public static void TC_09_TIS_WebAppResolve_IntegrationSapTest(PurchaseOrder docSAP) throws InterruptedException {
-		
+	@Test
+	public static void TC_09_TIS_WebAppResolve_IntegrationSapTestApproveDoc() throws InterruptedException {
 		
 		//start SAP
-        appSAPMain.init();
-        
-      //Login
-        appSAPMain.getSession().login("main");
-        
-        docSAP.createSapDoc();
-    
-        appSAPMain.stop();
-        
-        
-		
-		Init.OpenUrl(url);	
-
-	}	
-	
-	@Test(dataProvider = "validPOFromcsv")
-    public static void integrationTestSap(PurchaseOrder docSAP) {
-
-        //start SAP
         appSAPMain.init();
         
         //Login
         appSAPMain.getSession().login("main");
 
-        //Create SAP doc
-        
+        //Create SAP doc in se37 (/TISA/RFC_OCR_CREATE) and remember his number
+        SapDocument docSAP = new SapDocument(appSAPMain);
+        /*  
         docSAP.createSapDoc();
-        docSAP.startWorkflow();
         
-       appSAPMain.stop();
-       
-       
-}
+        //Open "n/TISA/C"
+        docSAP.openControl();
+              
+        //start Workflow for created Sap doc, by doc number
+        docSAP.startWorkflow();           
+              
+       	  /*
+       	  1. Open WebApp;
+          2. Approve document and verify that it's has been approved; 		
+          3. Close WebApp
+           
+       				SapDocument eFlowID = docSAP;
+       				Init.OpenUrl(url);
+       				l.login(unLogin, pwLogin);
+       				eFLOW.approveWorkFlowToo(eFlowID);
+       				l.logout();	
+      	*/			
+      	//Open "n/TISA/C"
+          docSAP.openControl();
+       		        
+        //Find created Sap doc
+       	  docSAP.findSapDoc();
+       	  
+       	//Check, doc have status approved
+       	  docSAP.verifyThatDocApproved();
+
+	}	
+	
 }

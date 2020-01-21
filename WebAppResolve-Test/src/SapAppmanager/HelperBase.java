@@ -73,9 +73,10 @@ public class HelperBase {
         findById(id).invoke("doubleClickNode", node);
     }
     
+    
    
 
-    protected void setCurrentLineByDocNumber(String id, String column, String value) {
+    protected void setCurrentLineByDocNumber(String id, String column, String value)  {
 
         ActiveXComponent Obj = findById(id);
         Obj.invoke("clearSelection");
@@ -99,9 +100,10 @@ public class HelperBase {
         }
         if (anError) {
             try {
-                throw new Exception("Can't find doc number: "+value);
+                throw new Exception("Can't find doc: "+value);
             } catch (Exception e) {
                 e.printStackTrace();
+                
             }
         }
 

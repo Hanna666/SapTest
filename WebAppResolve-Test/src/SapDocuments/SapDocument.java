@@ -25,9 +25,10 @@ import org.testng.Assert;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import com.pageobjectmodel.pages.TIS_eFLOW;
 import com.tis.testcase.Init;
 
-public class PurchaseOrder extends HelperBase {
+public class SapDocument extends HelperBase {
 	
     private String sapDocNum;
     private String docNumber;
@@ -57,81 +58,52 @@ public class PurchaseOrder extends HelperBase {
     private String itemDetailConfirmationTab;
 
     private String fieldForPurchOrg;
+    
+    
+    
 
-    public PurchaseOrder(ApplicationManager app) {
+    public SapDocument(ApplicationManager app) {
         super(app);
 
-        headerTablePOTAB1 = "wnd[0]/usr/subSUB1:/EBY/SAPLPDVI_SCREEN:0906/tabsG_0900_TABSTRIP/tabpG_0900_TS_TAB1/ssubG_0900_TS_TAB1_SUB:" +
-                "/EBY/SAPLPDPO_VIEW_SCREENS:0101/ctxt/EBY/PDPO_SHDR_IF-";
-        headerTablePOTAB2 = "wnd[0]/usr/subSUB1:/EBY/SAPLPDVI_SCREEN:0906/tabsG_0900_TABSTRIP/tabpG_0900_TS_TAB2/ssubG_0900_TS_TAB2_SUB:" +
-                "/EBY/SAPLPDPO_VIEW_SCREENS:0102/ctxt/EBY/PDPO_SHDR_IF-";
-        itemsTablePO = "wnd[0]/shellcont[1]/shell";
-
-        headerTableSAPPO = "wnd[0]/usr/subSUB0:SAPLMEGUI:0013/subSUB1:SAPLMEVIEWS:1100/subSUB2:SAPLMEVIEWS:1200/subSUB1:SAPLMEGUI:1102" +
-                "/tabsHEADER_DETAIL/tabpTABHDT10/ssubTABSTRIPCONTROL2SUB:SAPLMEGUI:1221/ctxtMEPO1222-";
-        itemsTableSAPPO = "wnd[0]/usr/subSUB0:SAPLMEGUI:0013/subSUB2:SAPLMEVIEWS:1100/subSUB2:SAPLMEVIEWS:1200/subSUB1:SAPLMEGUI:1211/tblSAPLMEGUITC_1211/";
-
-        itemDetailConfirmationTab = "wnd[0]/usr/subSUB0:SAPLMEGUI:0020/subSUB3:SAPLMEVIEWS:1100/subSUB2:SAPLMEVIEWS:1200/subSUB1:SAPLMEGUI:1301/" +
-                "subSUB2:SAPLMEGUI:1303/tabsITEM_DETAIL/tabpTABIDT18/";
-
-        fieldForPurchOrg = "wnd[0]/usr/subSUB0:SAPLMEGUI:0020/subSUB1:SAPLMEVIEWS:1100/subSUB2:SAPLMEVIEWS:1200/subSUB1:SAPLMEGUI:1102/" +
-                "tabsHEADER_DETAIL/tabpTABHDT10/ssubTABSTRIPCONTROL2SUB:SAPLMEGUI:1221/ctxtMEPO1222-EKGRP";
     }
 
-    public PurchaseOrder fillData(String[] split) {
-        docType = split[0];
-        generalCurrency = split[1];
-        vendor = split[2];
-        termsOfPayment = split[3];
-        compCode = split[4];
-        purchGroup = split[5];
-        purchOrg = split[6];
-        itemMaterial = split[7];
-        itemQuantity = split[8];
-        itemPO_Unit = split[9];
-        itemNetPrice = split[10];
-        itemPlant = split[11];
-        itemStore = split[12];
 
-        return this;
-    }
-
-    public PurchaseOrder withDocType() {
+    public SapDocument withDocType() {
         type(headerTablePOTAB1+"DOC_TYPE", docType);
         return this;
     }
 
-    public PurchaseOrder withVendor() {
+    public SapDocument withVendor() {
         type(headerTablePOTAB1+"VENDOR", vendor);
         return this;
     }
 
-    public PurchaseOrder withTermsOfPayment() {
+    public SapDocument withTermsOfPayment() {
         type(headerTablePOTAB1+"PMNTTRMS", termsOfPayment);
         return this;
     }
 
-    public PurchaseOrder withGeneralCurrency() {
+    public SapDocument withGeneralCurrency() {
         type(headerTablePOTAB1+"CURRENCY", generalCurrency);
         return this;
     }
 
-    public PurchaseOrder withPurchOrg() {
+    public SapDocument withPurchOrg() {
         type(headerTablePOTAB2+"PURCH_ORG", purchOrg);
         return this;
     }
 
-    public PurchaseOrder withPurchGroup() {
+    public SapDocument withPurchGroup() {
         type(headerTablePOTAB2+"PUR_GROUP", purchGroup);
         return this;
     }
 
-    public PurchaseOrder withCompCode() {
+    public SapDocument withCompCode() {
         type(headerTablePOTAB2+"COMP_CODE", compCode);
         return this;
     }
 
-    public PurchaseOrder create() {
+    public SapDocument create() {
         makeAction("wnd[0]/tbar[1]/btn[5]", "press");
         makeAction("wnd[1]/tbar[0]/btn[0]", "press");
 
@@ -156,7 +128,7 @@ public class PurchaseOrder extends HelperBase {
     }
     
     
-    public void createSapDoc () {
+    public SapDocument createSapDoc () {
     	
     	//Start functional module
     	waitElement("wnd[0]/tbar[0]/okcd", 3000);
@@ -172,7 +144,7 @@ public class PurchaseOrder extends HelperBase {
         makeAction("wnd[0]/tbar[1]/btn[2]", "press");
         makeAction("wnd[0]/tbar[1]/btn[8]", "press");
         sapDocNum = getFieldProperty("wnd[0]/usr/lbl[34,22]", "Text").toString();
-       
+        return this;
  
         
     }
@@ -182,12 +154,31 @@ public class PurchaseOrder extends HelperBase {
     	
     }
     
+    public void verifyThatDocApproved () {
+    	setCurrentLineByDocNumber("wnd[0]/usr/subWORKLIST_SCA:/TISA/SAPLAP_DISPLAY:0011/subMAIN_SCA:/TISA/SAPLAP_DISPLAY:0150/tabsTS_WORKLIST/tabpWORKLIST_TAB1/ssubWORKLIST_SCA:/TISA/SAPLAP_DISPLAY:0151/cntlCC_WORKLIST_TAB1/shellcont/shell",
+    							  "FW_ICON_WF_STATE", "@0V\\QApproved@");
+    
+    
+    }
+    
+    public void openControl () {
+    	type ("wnd[0]/tbar[0]/okcd", "/n/TISA/C");
+        makeAction("wnd[0]/tbar[0]/btn[0]", "press");
+    }
+    
+    public void findSapDoc () {
+    	setFieldProperty("wnd[0]/usr/subWORKLIST_SCA:/TISA/SAPLAP_DISPLAY:0011/subDIALOG_SCA:/TISA/SAPLAP_DISPLAY:0013/ssubDIALOG_SCA:/TISA/SAPLFW_DISPLAY_SELSCR:0010/ssubSUB_SEL:/TISA/SAPLAP_DISPLAY_SELSCR:0010/txtS_TISN-LOW",
+    			   "text", "33176");
+    	makeAction("wnd[0]/tbar[1]/btn[32]", "press");
+    }
+    
+  
+    
     public void startWorkflow () { 
-    type ("wnd[0]/tbar[0]/okcd", "/n/TISA/C");
-    makeAction("wnd[0]/tbar[0]/btn[0]", "press");
+    
     setCurrentLineByDocNumber("wnd[0]/usr/subWORKLIST_SCA:/TISA/SAPLAP_DISPLAY:0011/subMAIN_SCA:/TISA/SAPLAP_DISPLAY:0150/tabsTS_WORKLIST/tabpWORKLIST_TAB1/ssubWORKLIST_SCA:/TISA/SAPLAP_DISPLAY:0151/cntlCC_WORKLIST_TAB1/shellcont/shell", "FW_DOCNO", sapDocNum);
     pressButton("wnd[0]/usr/subWORKLIST_SCA:/TISA/SAPLAP_DISPLAY:0011/subMAIN_SCA:/TISA/SAPLAP_DISPLAY:0150/tabsTS_WORKLIST/tabpWORKLIST_TAB1/ssubWORKLIST_SCA:/TISA/SAPLAP_DISPLAY:0151/cntlCC_WORKLIST_TAB1/shellcont/shell", "pressToolbarButton", "WF_START");
-    setFieldProperty("wnd[0]/usr/subWORKLIST_SCA:/TISA/SAPLAP_DISPLAY:0011/subDIALOG_SCA:/TISA/SAPLAP_DISPLAY:0013/ssubDIALOG_SCA:/TISA/SAPLWF_DISPLAY_DIALOG:0010/cmbGO_FL_START->MC_WF_ID", "key", "WF_CHK_NOK");
+    setFieldProperty("wnd[0]/usr/subWORKLIST_SCA:/TISA/SAPLAP_DISPLAY:0011/subDIALOG_SCA:/TISA/SAPLAP_DISPLAY:0013/ssubDIALOG_SCA:/TISA/SAPLWF_DISPLAY_DIALOG:0010/cmbGO_FL_START->MC_WF_ID", "key", "ALLOPEN");
     setFieldProperty("wnd[0]/usr/subWORKLIST_SCA:/TISA/SAPLAP_DISPLAY:0011/subDIALOG_SCA:/TISA/SAPLAP_DISPLAY:0013/ssubDIALOG_SCA:/TISA/SAPLWF_DISPLAY_DIALOG:0010/subTASK_SCA:/TISA/SAPLWF_DISPLAY_DIALOG:0040/tabsTS_TASK/tabpTS_TASK_1/ssubTS_TASK_SCA:/TISA/SAPLWF_DISPLAY_DIALOG:0030/tbl/TISA/SAPLWF_DISPLAY_DIALOGTC_REC/ctxt/TISA/SWF_REC_ENTRY-REC_ID[0,0]",
     		"text", "Zkhananueva");
     setFieldProperty("wnd[0]/usr/subWORKLIST_SCA:/TISA/SAPLAP_DISPLAY:0011/subDIALOG_SCA:/TISA/SAPLAP_DISPLAY:0013/ssubDIALOG_SCA:/TISA/SAPLWF_DISPLAY_DIALOG:0010/subNOTE_SCA:/TISA/SAPLFW_DISPLAY_DIALOG:0090/cntlCC_NOTE/shellcont/shell",
@@ -196,7 +187,7 @@ public class PurchaseOrder extends HelperBase {
     }
 	
 
-	public PurchaseOrder save() {
+	public SapDocument save() {
         makeAction("wnd[0]/tbar[0]/btn[11]", "press");
 
         checkForErrorsAndCloseWindow("/usr/cntlGR_2000_CONTAINER/shellcont/shell/shellcont[0]/shell");
@@ -206,43 +197,43 @@ public class PurchaseOrder extends HelperBase {
         return this;
     }
 
-    public PurchaseOrder selectTab(String value) {
+    public SapDocument selectTab(String value) {
         makeAction(String.format("wnd[0]/usr/subSUB1:/EBY/SAPLPDVI_SCREEN:0906/tabsG_0900_TABSTRIP/tabpG_0900_TS_TAB%s", value), "select");
         return this;
     }
 
-    public PurchaseOrder addLineItem() {
+    public SapDocument addLineItem() {
         pressButton("wnd[0]/shellcont[1]/shell", "pressToolbarButton", "ADDROW");
         return this;
     }
 
-    public PurchaseOrder removeLineItem() {
+    public SapDocument removeLineItem() {
         setSelectedRow("wnd[0]/shellcont[1]/shell", String.valueOf(Integer.parseInt(getFieldProperty("wnd[0]/shellcont[1]/shell", "RowCount").toString()) - 1));
         pressButton(itemsTablePO, "pressToolbarButton", "DELROW");
         return this;
     }
 
-    public PurchaseOrder fillCurrentItemMaterial(int row) {
+    public SapDocument fillCurrentItemMaterial(int row) {
         modifyCell(itemsTablePO, row, "/EBY/MATERIAL", itemMaterial);
         return this;
     }
 
-    public PurchaseOrder fillCurrentItemQuantity(int row) {
+    public SapDocument fillCurrentItemQuantity(int row) {
         modifyCell(itemsTablePO, row, "QUANTITY", itemQuantity);
         return this;
     }
 
-    public PurchaseOrder fillCurrentItemNetPrice(int row) {
+    public SapDocument fillCurrentItemNetPrice(int row) {
         modifyCell(itemsTablePO, row, "NET_PRICE", itemNetPrice);
         return this;
     }
 
-    public PurchaseOrder fillCurrentItemPO_Unit(int row) {
+    public SapDocument fillCurrentItemPO_Unit(int row) {
         modifyCell(itemsTablePO, row, "PO_UNIT", itemPO_Unit);
         return this;
     }
 
-    public PurchaseOrder pressEnterInItem() {
+    public SapDocument pressEnterInItem() {
         setSelectedRow("wnd[0]/shellcont[1]/shell", "0");
         makeAction("wnd[0]/shellcont[1]/shell", "pressEnter");
         return this;
@@ -331,7 +322,7 @@ public class PurchaseOrder extends HelperBase {
 
     }
 
-    public PurchaseOrder copyData(PurchaseOrder oldPO){
+    public SapDocument copyData(SapDocument oldPO){
 
         docType = oldPO.docType;
         generalCurrency = oldPO.generalCurrency;

@@ -23,6 +23,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.tis.testcase.Init;
 
+import SapDocuments.SapDocument;
+
 public class TIS_eFLOW extends Init {
 	public TIS_eFLOW(WebDriver driver) {
 		TIS_eFLOW.driver = driver;
@@ -424,4 +426,43 @@ public class TIS_eFLOW extends Init {
 
 	}
 
-}
+		public void approveWorkFlowToo(SapDocument eID) {
+			
+			try {
+				WebDriverWait wait=new WebDriverWait(driver,60);
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@aria-label='Search']")));
+				driver.findElement(By.xpath("//button[@aria-label='Search']")).click();
+				result.print("Clicked on Search", "Pass");
+				Thread.sleep(10000);
+				//WebElement eflowID = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/md-content[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[11]/div[1]/div[2]/input[1]"));
+				WebElement eflowID = driver.findElement(By.xpath("(//md-content//div//input[@name='filter'])[12]"));
+				//eflowID.sendKeys(eID);
+				Thread.sleep(1000);
+				result.print("Entered eFLOW ID "+eID, "Pass");
+				
+				if (driver.getPageSource().contains("ng-scope layout-row flex clickablelink")) {
+					result.print("successfully searched the eFLOW DI "+eID, "Pass");
+					driver.findElement(By.xpath("//div[@class='ng-scope layout-row flex clickablelink']")).click();
+					result.print("Clicked on Invoice Number", "Pass");
+				}else {
+					result.print("Searched eFLOW DI "+eID+" does not exist in My Workflow list", "Fail");
+					System.out.println("tesPass");
+				}
+		
+				//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[span[contains(text(),'Approve')]]")));
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[span[contains(text(),'')]]")));
+				Thread.sleep(10000);
+				//driver.findElement(By.xpath("//div[span[contains(text(),'Approve')]]")).click();
+				driver.findElement(By.xpath("//i[contains(text(),'check')]")).click();
+				result.print("Clicked on Approve Workflow button on tool bar " + eID, "Pass");
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@aria-label='Refresh']")));
+				Thread.sleep(10000);
+				result.print("Approved Workflow successfully for the invoice " + eID, "Pass");
+			} catch (Exception e) {
+				result.print("Failed to Approve WorkFlow", "Fail");
+			}
+
+		}
+			
+		}
+
